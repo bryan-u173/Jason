@@ -21,6 +21,5 @@ from django.conf.urls import handler404
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.inicio, name='inicio'),  # Página principal: http://127.0.0
-    path('reto/<int:reto_id>/', views.detalle_reto, name='detalle_reto'), # Detalles: http://127.0.0reto/1/
+    path('api/', include('retos.urls')),
 ]
